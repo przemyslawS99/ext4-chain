@@ -1,0 +1,11 @@
+[Unit]
+Description=Hyperledger test-network and ext4-chain daemon
+
+[Service]
+User=przem
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin
+ExecStart=/usr/local/bin/ext4_chain.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
